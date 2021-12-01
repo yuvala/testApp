@@ -11,7 +11,7 @@ import {
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen b</Text>
+      <Text>Home Screen </Text>
       <Button
         title="Go to Details"
         onPress={() => {
@@ -19,6 +19,16 @@ function HomeScreen({ navigation }) {
           navigation.navigate('Details', {
             itemId: 86,
             otherParam: 'anything you want here',
+          });
+        }}
+      />
+      <Button
+        title="request a praking spot"
+        onPress={() => {
+          /* 1. Navigate to the Details route with params */
+          navigation.navigate('parkRequset', {
+            itemId: 86,
+            otherParam: 'Parking  here',
           });
         }}
       />
