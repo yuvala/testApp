@@ -31,8 +31,13 @@ function ParkLookupScreen({ route, navigation }) {
 
 const styles = StyleSheet.create({
   btnRounded: {
-    backgroundColor: '#ff5050',
-    borderRadius: 50,
+    width: 100,
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    borderRadius: 100,
+    backgroundColor: 'orange',
   },
   mainContainer: {
     flex: 1,

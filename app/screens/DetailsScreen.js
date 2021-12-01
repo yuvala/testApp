@@ -1,12 +1,5 @@
 import * as React from 'react';
-import {
-  Image,
-  Button,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { Button, Text, View } from 'react-native';
 
 function DetailsScreen({ route, navigation }) {
   /* 2. Get the param */
