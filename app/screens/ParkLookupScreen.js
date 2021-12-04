@@ -20,11 +20,6 @@ function ParkLookupScreen({ route, navigation }) {
           });
         }}
       />
-      <Button
-        style={styles.btnRounded}
-        title="Go back"
-        onPress={() => navigation.goBack()}
-      />
     </View>
   );
 }

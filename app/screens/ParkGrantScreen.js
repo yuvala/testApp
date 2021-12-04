@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button, Text, View } from 'react-native';
 
-function DetailsScreen({ route, navigation }) {
+function ParkGrantScreen({ route, navigation }) {
   /* 2. Get the param */
   const { itemId } = route.params;
   const { otherParam } = route.params;
@@ -24,4 +24,4 @@ function DetailsScreen({ route, navigation }) {
   );
 }
 
-export default DetailsScreen;
+export default ParkGrantScreen;

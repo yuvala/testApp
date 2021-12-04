@@ -1,69 +1,47 @@
 import * as React from 'react';
-import {
-  Image,
-  Button,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
 function HomeScreen({ navigation }) {
+  const onPress = (v) =>
+    navigation.navigate(v, {
+      itemId: 86,
+      otherParam: 'Parking  here',
+    });
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ color: 'red' }}>Home Screen </Text>
-      <Button
-        title="Go to Details"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate('Details', {
-            itemId: 86,
-            otherParam: 'anything you want here',
-          });
-        }}
-      />
-      <Button
-        title="request a praking spot"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate('parkRequset', {
-            itemId: 86,
-            otherParam: 'Parking  here',
-          });
-        }}
-      />
+    <View style={styles.aContainer}>
+      <TouchableOpacity
+        style={styles.roundedBtn}
+        onPress={() => onPress('Details')}
+      >
+        <Text>park granting</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.roundedBtn}
+        onPress={() => onPress('parkRequset')}
+      >
+        <Text>park booking</Text>
+      </TouchableOpacity>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
-  aContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
+  aContainer: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   background: {
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
-  loginButton: {
-    width: '100%',
-    height: 70,
-    backgroundColor: '#fc5c65',
-  },
-  registerButton: {
-    width: '100%',
-    height: 70,
-    backgroundColor: '#fecd65',
-  },
-  logo: {
-    width: 70,
-    height: 70,
-  },
-  logoContainer: {
-    position: 'absolute',
-    top: 70,
+
+  roundedBtn: {
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.2)',
     alignItems: 'center',
+    justifyContent: 'center',
+    width: 100,
+    height: 100,
+    backgroundColor: '#fff',
+    borderRadius: 50,
   },
 });
 export default HomeScreen;
